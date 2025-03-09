@@ -29,7 +29,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "sl-market.vercel.app",
+    origin: "https://sl-market.vercel.app",
     credentials: true,
   })
 );
