@@ -27,11 +27,7 @@ cloudinary.config({
 
 // create server
 const server = app.listen(process.env.PORT, () => {
-<<<<<<< HEAD
-  console.log(
-    `Server is running on http://localhost:${process.env.PORT}`
-  );
-=======
+
   console.log(`Server is running on http://localhost:${process.env.PORT}`);
 });
 
@@ -100,7 +96,6 @@ app.use(ErrorHandler);
 process.on("uncaughtException", (err) => {
   console.log(`Error: ${err.message}`);
   console.log(`shutting down the server for handling UNCAUGHT EXCEPTION! 💥`);
->>>>>>> 1fd14c3a75a03a6a7078faaf475ab7b521bf008f
 });
 
 // unhandled promise rejection
