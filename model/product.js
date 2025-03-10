@@ -21,7 +21,7 @@ const productSchema = new mongoose.Schema({
   },
   discountPrice: {
     type: Number,
-    required: [false, "Please enter your product price!"],
+    required: [true, "Please enter your product price!"],
   },
   stock: {
     type: Number,
@@ -29,10 +29,16 @@ const productSchema = new mongoose.Schema({
   },
   images: [
     {
-      type: String,
+      public_id: {
+        type: String,
+        required: true,
+      },
+      url: {
+        type: String,
+        required: true,
+      },
     },
   ],
-
   reviews: [
     {
       user: {
@@ -47,10 +53,10 @@ const productSchema = new mongoose.Schema({
       productId: {
         type: String,
       },
-      createdAt: {
+      createdAt:{
         type: Date,
         default: Date.now(),
-      },
+      }
     },
   ],
   ratings: {
